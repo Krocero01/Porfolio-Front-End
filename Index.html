@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    
+</head>
+<body>
+
+    <nav>        
+        <button id="logeo" type="submit"><b>Login</b></button>            
+        <a target="_blank" href="https://www.facebook.com/profile.php?id=100081709826310" rel="noopener noreferrer" class="facebook" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a target="_blank" href="https://twitter.com/CarnevaliniAle" rel="noopener noreferrer" class="twitter"aria-label="twitter"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/ale.carnevalini.ok/" rel="noopener noreferrer" class="instagram" aria-label="instagram"><i class="fab fa-instagram"></i></a>    
+        <img id="logoAP" src="imagenes\Logo-Argentina-Programa.png" alt="Logo Arg. Prog.">       
+    </nav>
+
+    <div id="login-button">        
+        <div class="overlay" id="overlay">
+            <div class="popup" id="popup">
+                <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup" aria-label="btn-cerrar"><i class="fas fa-times"></i></a>
+                <h3>LOGIN</h3>
+                <form action="">
+                    <div class="contenedor-inputs">
+                        <input type="text" placeholder="Usuario">
+                        <input type="password" placeholder="Contraseña">
+                    </div>
+                    <input type="submit" class="btn-submit" value="Ingresar">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="presentacion">
+        <div class="banner">
+            <div class="btn-edit" onclick="cambiar_banner()"><a href="#" class="btn-modificar" aria-label="edit"><i class="fas fa-pen"></i></a></div>
+        </div>
+        <div class="foto-pers">
+            <div class="btn-edit-foto" onclick="cambiar_PRES()"><a href="#" class="btn-modificar-foto-pers" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+        </div>                       
+        <aside>
+            <img id="logoAP2" src="imagenes\Logo-Argentina-Programa.png" alt="Logo Arg. Prog."> 
+            <div class="nombre">            
+                <b id="nombre">Alejandro Carnevalini</b>
+                <div class="btn-edit-nombre" id="btn-present" onclick="cambiar_parrafo_PRES()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+            </div>
+            <div>
+                <a id="titulo">Full Stack Developer Jr.</a>
+                <div class="btn-edit-tit" id="btn-present" onclick="cambiar_parrafo_PRES2()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>                
+            </div>
+        </aside>
+        <br clear="right">
+        <br clear="right">
+        <br clear="right">
+        <br clear="right">
+    
+        <div class="seccion"><b>Acerca de</b>
+            <div class="btn-edit-sec" onclick="agregar_acerca()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-plus"></i></a></div>   
+            <br clear="right">
+            <br clear="right">
+            <div id="div-acercade">
+                <div class="acercade">        
+                    <a id="contenidoAD">Tecnico en electronica y telecomunicaciones</a>
+                    <div class="btn-edit-sec" id="elim_parrafo_AD" onclick="eliminar_contenido_AD()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>
+                    <div class="btn-edit-sec" id="camb_parrafo_AD" onclick="cambiar_parrafo_AD()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>                    
+                    <br clear="right">
+                    <br clear="right">
+                </div> 
+            </div>       
+        </div>
+        <div class="seccion"><b>Experiencia</b> 
+            <div class="btn-edit-sec" onclick="agregar_exp()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-plus"></i></a></div>      
+            <br clear="right">
+            <br clear="right">
+            <div id="div-experiencia">
+                <div class="experiencia">
+                    <a id="text-exp">Alguna experiencia</a>
+                    <div class="btn-edit-sec" id="elim_parrafo_Exp" onclick="eliminar_contenido_Exp()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>
+                    <div class="btn-edit-sec" id="camb_parrafo_Exp" onclick="cambiar_parrafo_Exp()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>                         
+                    <br clear="right">
+                    <br clear="right">
+                </div>
+            </div>        
+        </div>
+        <div class="seccion"><b>Educacion</b>
+            <div class="btn-edit-sec" onclick="agregar_educ()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-plus"></i></a></div>    
+            <br clear="right">
+            <br clear="right">
+            <div id="div-estudios">
+                <div class="Estudios">
+                    <img class="logoED" src="imagenes\Logo-roscelli.jpg" alt="LogoRoscelli">
+                    <aside>
+                        <b class="est">Colegio Agustin Roscelli</b>                        
+                        <div class="btn-edit-sec" id="btn-elim-educ" onclick="eliminar_educ()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>           
+                        <div class="btn-edit-sec" id="btn-camb-educ" onclick="cambiar_educ()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+                        <p class="text-est">Jardin de Infantes - Estudios Primarios</p>
+                        <p class="text-año-est">1986 - 1994</p>
+                    </aside>
+                    <br clear="right">
+                </div>            
+                <div class="Estudios">
+                    <img class="logoED" src="imagenes\eet n° 3-0.png" alt="LogoTecnica3">
+                    <aside>
+                        <b class="est">E.E.T.N°3 Fray Luis Beltran</b>                        
+                        <div class="btn-edit-sec" id="btn-elim-educ1" onclick="eliminar_educ1()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>                  
+                        <div class="btn-edit-sec" id="btn-camb-educ1" onclick="cambiar_educ1()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+                        <p class="text-est">Tecnico en electronica y telecomunicaciones</p>
+                        <p class="text-año-est">1995 - 2001</p>
+                    </aside>
+                    <br clear="right">
+                </div>
+            </div>
+        </div>    
+        <div class="seccion"><b>Hard & Soft Skills</b>
+            <div class="btn-edit-sec" onclick="agregar_skill()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-plus"></i></a></div>               
+            <br clear="right">
+            <br clear="right">
+            <div id="div-skills">
+                <div class="skills">
+                    <p class="nombre-habilidad"><b>Resolucion de problemas</b></p>
+                    <aside>                        
+                        <div class="btn-edit-sec" id="btn-elim-skills" onclick="eliminar_skill()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>
+                        <div class="btn-edit-sec" id="btn-camb-skills" onclick="cambiar_porc()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+                    </aside>     
+                    <div class="barra">
+                        <div class="barra-porc"></div>            
+                    </div>               
+                    <br clear="right">
+                </div>            
+                <div class="skills">
+                    <p class="nombre-habilidad"><b>Velocidad de desarrollo</b></p>
+                    <aside>                        
+                        <div class="btn-edit-sec" id="btn-elim-skills1" onclick="eliminar_skill1()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>
+                        <div class="btn-edit-sec" id="btn-camb-skills1" onclick="cambiar_porc1()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>
+                    </aside>      
+                    <div class="barra">
+                        <div class="barra-porc1"></div>
+                    </div>
+                    <br clear="right">
+                </div>       
+            </div>
+        </div>
+        <div class="seccion"><b>Proyectos</b>
+            <div class="btn-edit-sec" onclick="agregar_proy()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-plus"></i></a></div>        
+            <br clear="right">
+            <br clear="right">
+            <div id="div-proyectos">
+                <div class="proyectos">
+                    <a id="text-proy">Algun proyecto</a>                    
+                    <div class="btn-edit-sec" id="elim_parrafo_proy" onclick="eliminar_contenido_Proy()"><a href="#" class="btn-right" aria-label="edit"><i class="fas fa-trash-alt"></i></a></div>     
+                    <div class="btn-edit-sec" id="camb_parrafo_proy" onclick="cambiar_parrafo_Proy()"><a href="#" class="btn-right" aria-label="edit"><i class="fa fa-pen"></i></a></div>               
+                    <br clear="right">
+                    <br clear="right">
+                </div>
+            </div>        
+        </div> 
+        <br clear="right">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+<script src="script.js"></script>
+</html>
